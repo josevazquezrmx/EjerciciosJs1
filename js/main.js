@@ -50,23 +50,52 @@ else if ((num3<=num1)&&(num3<=num2)){
 
 
 //4. Solicitar un entero (entre el 100 y el 200) y determinar si es múltiplo de 3
-let num4 = prompt ("Ingresa un numero, entre l y 100");
+let num4 = prompt ("Ingresa un numero, entre l00 y 200");
 console.log(num4);
 
 if ((num4>=100)&&(num4<=200)) {
 } 
 else if ((num4<100) || (num4>200)) {
-    alert (num4+" No esta demtro de los parametros")
+    alert (num4+" No esta demtro de los parametros");
 }
-if (num4%3){
-    
+if (num4%3==0){
+    alert (num4+ " Es numero multiplo de 3");
+} 
+else {
+    alert (num4+ " No es multiplo de 3");
 }
 
 //5. Elaborar un algoritmo para leer 3 números y determinar sí uno es la suma de los otros dos
+let num5 = parseInt(prompt ("Ingresa un numero"));
+console.log(num5);
+let num6 = parseInt (prompt ("Ingresa otro numero"));
+console.log(num6);
+let num7 = parseInt (prompt ("Ingresa otro numero"));
+console.log(num7);
 
+if (num5+num6==num7){
+    alert (num7+" Es la suma de " +num5 +"+"+num6);
+}
+else if (num6+num7==num5){
+    alert (num8+" Es la suma de " +num6 +"+"+num7);
+}
+else if (num5+num7==num6){
+    alert (num6+" Es la suma de " +num7+"+"+num6);
+}
+else {
+    alert ("Ninguno es la suma de los otros dos números");
+}
 
 //6. Elabora un algoritmo para leer un número y determinar si es par o impar
+let num8 = prompt ("Ingresa un numero");
+console.log(num8);
 
+if (num8%2==0){
+    alert (num8+ " Es numero par");
+} 
+else {
+    alert (num8+ " No es par");
+}
 
 
 //NO USAR EN PRODUCCION
