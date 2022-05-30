@@ -44,7 +44,30 @@ else if ((num3<=num1)&&(num3<=num2)){
 }
 
 //3. Realizar un algortimo para adivinar un número entre el 1 y el 100 en el menor número de pasos posibles
+function adivinar(){
+	let superior = 100;
+	let inferior = 0;
+	let noEncontrado = true;
+	while(noEncontrado){
+		let mid = parseInt( inferior + ((superior-inferior)/2));
+        console.log(mid);
+        console.log(((superior-inferior)/2));
+		if(((superior-inferior)/2)<1){
+			noEncontrado = false;
+			alert("Tu número es el "+(parseInt(mid)+1));
+			break;
+		} //if
+		let res = confirm("Tu número es menor o igual a " +mid);
+		if(res){
+			superior=mid;
+		}else{
+			inferior=mid;
+		} // if
+        console.log(inferior, superior);
+	} //while
+} //adivinar
 
+adivinar ();
 
 //4. Solicitar un entero (entre el 100 y el 200) y determinar si es múltiplo de 3
 
